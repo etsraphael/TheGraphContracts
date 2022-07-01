@@ -24,3 +24,18 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/teaToken.ts
+  - kind: ethereum
+    name: User
+    network: bsc
+    source:
+      address: "0xC959D6388058a326c59508e2beAB8Be12de4E0C3"
+      abi: User
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      abis:
+        - name: User
+          file: ./abis/User.json
+      eventHandlers:
+      file: ./src/User.ts

@@ -9,12 +9,14 @@ contract User {
         string userName;
         bool isValid;
     }
+    event setAccountEvent(Member member);
 
     Member[] private memberList;
     mapping (address => Member) private members;
 
     function setAccount(string memory _userName) public returns (bool) {
         members[msg.sender] = Member(address(msg.sender), _userName, true);
+        emit setAccountEvent(Member(address(msg.sender), _userName, true));
         return true;
     }
 
