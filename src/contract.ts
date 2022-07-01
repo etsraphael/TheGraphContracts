@@ -1,5 +1,5 @@
 import { BigInt } from "@graphprotocol/graph-ts"
-import { Contract, Approval, Transfer } from "../generated/Contract/Contract"
+import { Approval, Transfer } from "../generated/Token/Contract"
 import { ExampleEntity } from "../generated/schema"
 
 export function handleApproval(event: Approval): void {
