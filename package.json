@@ -2,6 +2,7 @@
   "name": "theGraphContracts",
   "license": "UNLICENSED",
   "scripts": {
+    "test": "graph codegen && graph build",
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ theGraphContracts",
