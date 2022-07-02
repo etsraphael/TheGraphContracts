@@ -1,5 +1,5 @@
 {
-  "name": "theGraphContracts",
+  "name": "the-graph-contracts",
   "license": "UNLICENSED",
   "scripts": {
     "test": "graph codegen && graph build",

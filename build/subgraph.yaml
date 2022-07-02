@@ -24,3 +24,22 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: Token/Token.wasm
+  - kind: ethereum
+    name: Member
+    network: bsc
+    source:
+      address: "0xC959D6388058a326c59508e2beAB8Be12de4E0C4"
+      abi: User
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - setAccountEvent
+      abis:
+        - name: User
+          file: Member/abis/User.json
+      eventHandlers:
+        - event: setAccountEvent((address,string,bool))
+          handler: handlesetAccountEvent
+      file: Member/Member.wasm
