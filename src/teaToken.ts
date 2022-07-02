@@ -16,9 +16,6 @@ export function handleApproval(event: Approval): void {
     entity.count = BigInt.fromI32(0)
   }
 
-  // BigInt and BigDecimal math are supported
-  entity.count = entity.count + BigInt.fromI32(1)
-
   // Entity fields can be set based on event parameters
   entity.owner = event.params.owner
   entity.spender = event.params.spender
