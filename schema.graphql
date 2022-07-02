@@ -4,3 +4,10 @@ type ExampleEntity @entity {
   owner: Bytes! # address
   spender: Bytes! # address
 }
+
+type User @entity {
+  id: ID!
+  balance: BigInt!
+  userName: String!
+  createdAt: BigInt!
+}
