@@ -7,7 +7,6 @@ contract User {
     struct Member {
         address owner;
         string userName;
-        bool isValid;
     }
     event setAccountEvent(Member member);
 
@@ -15,19 +14,19 @@ contract User {
     mapping (address => Member) private members;
 
     function setAccount(string memory _userName) public returns (bool) {
-        members[msg.sender] = Member(address(msg.sender), _userName, true);
-        emit setAccountEvent(Member(address(msg.sender), _userName, true));
+        members[msg.sender] = Member(address(msg.sender), _userName);
+        emit setAccountEvent(Member(address(msg.sender), _userName));
         return true;
     }
 
     function deleteMyAccount() public returns (bool) {
-        members[msg.sender] = Member(address(0), "", false);
+        members[msg.sender] = Member(address(0), "");
         return true;
     }
 
     function getAccount() public view returns (Member memory) {
         if(members[msg.sender].owner == msg.sender) return members[msg.sender];
-        else return Member(address(0), "", false);
+        else return Member(address(0), "");
     }
 
 }

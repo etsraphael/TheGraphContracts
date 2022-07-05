@@ -38,10 +38,6 @@ export class setAccountEventMemberStruct extends ethereum.Tuple {
   get userName(): string {
     return this[1].toString();
   }
-
-  get isValid(): boolean {
-    return this[2].toBoolean();
-  }
 }
 
 export class User__getAccountResultValue0Struct extends ethereum.Tuple {
@@ -51,10 +47,6 @@ export class User__getAccountResultValue0Struct extends ethereum.Tuple {
 
   get userName(): string {
     return this[1].toString();
-  }
-
-  get isValid(): boolean {
-    return this[2].toBoolean();
   }
 }
 
@@ -82,6 +74,31 @@ export class User extends ethereum.SmartContract {
     return ethereum.CallResult.fromValue(value[0].toBoolean());
   }
 
+  getAccount(): User__getAccountResultValue0Struct {
+    let result = super.call(
+      "getAccount",
+      "getAccount():((address,string))",
+      []
+    );
+
+    return changetype<User__getAccountResultValue0Struct>(result[0].toTuple());
+  }
+
+  try_getAccount(): ethereum.CallResult<User__getAccountResultValue0Struct> {
+    let result = super.tryCall(
+      "getAccount",
+      "getAccount():((address,string))",
+      []
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(
+      changetype<User__getAccountResultValue0Struct>(value[0].toTuple())
+    );
+  }
+
   setAccount(_userName: string): boolean {
     let result = super.call("setAccount", "setAccount(string):(bool)", [
       ethereum.Value.fromString(_userName)
@@ -99,31 +116,6 @@ export class User extends ethereum.SmartContract {
     }
     let value = result.value;
     return ethereum.CallResult.fromValue(value[0].toBoolean());
-  }
-
-  getAccount(): User__getAccountResultValue0Struct {
-    let result = super.call(
-      "getAccount",
-      "getAccount():((address,string,bool))",
-      []
-    );
-
-    return changetype<User__getAccountResultValue0Struct>(result[0].toTuple());
-  }
-
-  try_getAccount(): ethereum.CallResult<User__getAccountResultValue0Struct> {
-    let result = super.tryCall(
-      "getAccount",
-      "getAccount():((address,string,bool))",
-      []
-    );
-    if (result.reverted) {
-      return new ethereum.CallResult();
-    }
-    let value = result.value;
-    return ethereum.CallResult.fromValue(
-      changetype<User__getAccountResultValue0Struct>(value[0].toTuple())
-    );
   }
 }
 

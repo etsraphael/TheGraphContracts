@@ -40,6 +40,6 @@ dataSources:
         - name: User
           file: Member/abis/User.json
       eventHandlers:
-        - event: setAccountEvent((address,string,bool))
+        - event: setAccountEvent((address,string))
           handler: handlesetAccountEvent
       file: Member/Member.wasm

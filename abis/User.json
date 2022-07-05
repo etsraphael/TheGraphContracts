@@ -1,81 +1,84 @@
-[{
-		"inputs": [],
-		"name": "deleteMyAccount",
-		"outputs": [{
-			"internalType": "bool",
-			"name": "",
-			"type": "bool"
-		}],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [{
-			"internalType": "string",
-			"name": "_userName",
-			"type": "string"
-		}],
-		"name": "setAccount",
-		"outputs": [{
-			"internalType": "bool",
-			"name": "",
-			"type": "bool"
-		}],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
+[
 	{
 		"anonymous": false,
-		"inputs": [{
-			"components": [{
-					"internalType": "address",
-					"name": "owner",
-					"type": "address"
-				},
-				{
-					"internalType": "string",
-					"name": "userName",
-					"type": "string"
-				},
-				{
-					"internalType": "bool",
-					"name": "isValid",
-					"type": "bool"
-				}
-			],
-			"indexed": false,
-			"internalType": "struct User.Member",
-			"name": "member",
-			"type": "tuple"
-		}],
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct User.Member",
+				"name": "member",
+				"type": "tuple"
+			}
+		],
 		"name": "setAccountEvent",
 		"type": "event"
 	},
 	{
 		"inputs": [],
+		"name": "deleteMyAccount",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "getAccount",
-		"outputs": [{
-			"components": [{
-					"internalType": "address",
-					"name": "owner",
-					"type": "address"
-				},
-				{
-					"internalType": "string",
-					"name": "userName",
-					"type": "string"
-				},
-				{
-					"internalType": "bool",
-					"name": "isValid",
-					"type": "bool"
-				}
-			],
-			"internalType": "struct User.Member",
-			"name": "",
-			"type": "tuple"
-		}],
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					}
+				],
+				"internalType": "struct User.Member",
+				"name": "",
+				"type": "tuple"
+			}
+		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_userName",
+				"type": "string"
+			}
+		],
+		"name": "setAccount",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
