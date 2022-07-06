@@ -1,10 +1,12 @@
 type BalanceAccount @entity {
+  "Tea token address"
   id: ID!
   createdAt: BigInt!
   balance: BigInt!
 }
 
 type User @entity {
+  "Tea token address"
   id: ID!
   balance: BigInt!
   userName: String!
