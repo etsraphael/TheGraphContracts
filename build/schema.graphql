@@ -5,6 +5,12 @@ type ExampleEntity @entity {
   spender: Bytes! # address
 }
 
+type BalanceAccount @entity {
+  id: ID!
+  createdAt: BigInt!
+  balance: BigInt!
+}
+
 type User @entity {
   id: ID!
   balance: BigInt!
