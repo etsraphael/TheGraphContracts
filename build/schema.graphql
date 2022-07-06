@@ -1,10 +1,3 @@
-type ExampleEntity @entity {
-  id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
-}
-
 type BalanceAccount @entity {
   id: ID!
   createdAt: BigInt!
