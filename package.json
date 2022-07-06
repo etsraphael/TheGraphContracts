@@ -5,10 +5,10 @@
     "test": "graph codegen && graph build",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ theGraphContracts",
-    "create-local": "graph create --node http://localhost:8020/ theGraphContracts",
-    "remove-local": "graph remove --node http://localhost:8020/ theGraphContracts",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 theGraphContracts"
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ wiinscore",
+    "create-local": "graph create --node http://localhost:8020/ wiinscore",
+    "remove-local": "graph remove --node http://localhost:8020/ wiinscore",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 wiinscore"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.30.0",
