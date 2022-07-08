@@ -28,7 +28,7 @@ dataSources:
     name: Member
     network: bsc
     source:
-      address: "0xC959D6388058a326c59508e2beAB8Be12de4E0C4"
+      address: "0x4732e1f423c58a2193C55BFBd8a36183bCbcaAB8"
       abi: User
     mapping:
       kind: ethereum/events

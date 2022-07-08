@@ -1,4 +1,5 @@
 type BalanceAccount @entity {
+  "Tea token address"
   id: ID!
   createdAt: BigInt!
   balance: BigInt!
